@@ -74,7 +74,7 @@ class Admin_signin extends CI_Controller {
 	public function sendMessage($to,$text){
 		$basic  = new \Nexmo\Client\Credentials\Basic('1721e9e5', 'kk1NoaqN5Dh0ir1q');
 		$client = new \Nexmo\Client($basic);
-		$insights = $client->insights()->standard($to);
+		//$insights = $client->insights()->standard($to);
 		$message = $client->message()->send([
 			'to' => $to,
 			'from' => '18103206589',
